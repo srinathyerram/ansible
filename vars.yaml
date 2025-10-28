@@ -1,4 +1,4 @@
-- name: play leval variables
+- name: play leval variables and task level variables
   hosts: local
   connection: local # Ansible will run the playbook on the local machine that ansible is installed
   vars:
@@ -10,4 +10,12 @@
       ansible.builtin.debug:
         msg: "Course: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
 
+    - name: print course details 
+      vars:
+        COURSE: DevOps  # In this task level variable COURSE value is changed to DevOps
         
+      ansible.builtin.debug:
+        msg: 
+          - "Course: {{ COURSE }}"
+          - "Duration: {{ DURATION }}"
+          - "Trainer: {{ TRAINER }}"
