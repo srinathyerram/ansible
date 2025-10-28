@@ -1,0 +1,50 @@
+- name: "srinath"
+  age: 28
+  dob: "21-05-1995"
+  address:
+  - doorNo: "4-55"
+    street: "cpi colony"
+    city: "tadipatri"
+    pin: "515411"
+    type: "current"
+
+  - doorNo: "2-34"
+    street: "mg road"
+    city: "anantapur"
+    pin: "515001"
+    type: "permanent"
+
+  skills:
+    programming:
+      - "python"
+      - "java"
+      - "c++"
+    webDevelopment:
+      - "html"
+      - "css"
+      - "javascript"
+
+- name: "arjun"
+  age: 30
+  dob: "15-08-1993"
+  address:
+  - doorNo: "7-89"
+    street: "btm layout"
+    city: "bangalore"
+    pin: "560076"
+    type: "current" 
+
+  - doorNo: "1-23"
+    street: "jayanagar"
+    city: "bangalore"   
+    pin: "560011"
+    type: "permanent"
+  skills:
+    programming:
+      - "ruby"
+      - "go"
+      - "swift"
+    webDevelopment:
+      - "react"
+      - "nodejs"
+      - "angular" 
