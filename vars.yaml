@@ -1,0 +1,13 @@
+- name: play leval variables
+  hosts: local
+  connection: local # Ansible will run the playbook on the local machine that ansible is installed
+  vars:
+    COURSE: "Ansible"
+    DURATION: "5 weeks"
+    TRAINER: "Srinath"
+  tasks:
+    - name: print course details
+      ansible.builtin.debug:
+        msg: "Course: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
+
+        
