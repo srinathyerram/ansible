@@ -1,0 +1,6 @@
+- name: ping the server
+  hosts: frontend  #ips addresses fetched from inventory.ini from frontend group
+  # List of tasks to be executed on the remote server
+  tasks:
+    - name: ping the server
+      ansible.builtin.ping:
