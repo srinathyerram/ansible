@@ -1,8 +1,8 @@
 - name: user creation
-   hosts: local
-   connection: local
-   become: yes
-   tasks:
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
   - name: check if user exists
     ansible.builtin.command:
     register: user_output
@@ -10,7 +10,7 @@
   
   - name: print the user_output
     ansible.builtin.debug:
-     msg: "{{ user_output }}"
+    msg: "{{ user_output }}"
 
   - name: create user if not exists
     ansible.builtin.command: useradd demo_user
