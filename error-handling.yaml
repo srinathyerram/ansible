@@ -4,15 +4,14 @@
    become: yes
    tasks:
   - name: check if user exists
-     ansible.builtin.command:
-     register: user_output
-     ignore_errors: true
+    ansible.builtin.command:
+    register: user_output
+    ignore_errors: true
   
   - name: print the user_output
-     ansible.builtin.debug:
+    ansible.builtin.debug:
      msg: "{{ user_output }}"
 
   - name: create user if not exists
-     ansible.builtin.command: useradd demo_user
-     when: user_output.rc != 0
-     
+    ansible.builtin.command: useradd demo_user
+    when: user_output.rc != 0
